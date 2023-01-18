@@ -155,12 +155,12 @@ header .nav_ham {
 .about .about_text {
   width: 50%;
   padding-top: 10rem;
+  font-size: 5rem;
 }
 .about .about_pic img {
   width: 50rem;
   height: 50rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .about::before {
@@ -298,8 +298,7 @@ header .nav_ham {
 .overview .overview_pic img {
   width: 50rem;
   height: 50rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .overview .overview_text {
   width: 50%;
@@ -411,18 +410,7 @@ footer #page-top a:hover {
   background: yellow;
 }
 footer #page-top.UpMove {
-  -webkit-animation: UpAnime 0.5s forwards;
-          animation: UpAnime 0.5s forwards;
-}
-@-webkit-keyframes UpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: UpAnime 0.5s forwards;
 }
 @keyframes UpAnime {
   from {
@@ -435,18 +423,7 @@ footer #page-top.UpMove {
   }
 }
 footer #page-top.DownMove {
-  -webkit-animation: DownAnime 0.5s forwards;
-          animation: DownAnime 0.5s forwards;
-}
-@-webkit-keyframes DownAnime {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(100px);
-  }
+  animation: DownAnime 0.5s forwards;
 }
 @keyframes DownAnime {
   from {
@@ -488,8 +465,7 @@ footer #page-top.DownMove {
   .about .about_pic img {
     width: 25rem;
     height: 40rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .services .services_container {
     padding: 8rem 5rem;
@@ -579,8 +555,7 @@ footer #page-top.DownMove {
   .about .about_pic img {
     width: 25rem;
     height: 40rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .services {
     height: 100%;
@@ -648,6 +623,8 @@ footer #page-top.DownMove {
   height: 2px;
   left: 6px;
   background: rgb(255, 208, 40);
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 .hamburger span:nth-child(1) {
@@ -662,10 +639,14 @@ footer #page-top.DownMove {
 .hamburger.active span:nth-child(1) {
   top: 16px;
   left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .hamburger.active span:nth-child(2), .hamburger.active span:nth-child(3) {
   top: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -709,4 +690,6 @@ nav.globalMenuSp ul ul li:last-child {
 
 nav.globalMenuSp.active {
   transform: translateY(0%);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

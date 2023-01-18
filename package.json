@@ -1,7 +1,7 @@
 {
   "name": "final-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "class assignment https://vancouverpark.netlify.app/",
   "main": "index.js",
   "scripts": {
     "sass": "sass sass/main.scss css/main.css"
@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "sass": "^1.57.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuyaHirano1994/camp-site-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YuyaHirano1994/camp-site-website/issues"
+  },
+  "homepage": "https://github.com/YuyaHirano1994/camp-site-website#readme"
 }
