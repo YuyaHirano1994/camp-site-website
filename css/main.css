@@ -155,7 +155,7 @@ header .nav_ham {
 .about .about_text {
   width: 50%;
   padding-top: 10rem;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 .about .about_pic img {
   width: 50rem;
@@ -461,6 +461,7 @@ footer #page-top.DownMove {
   .about .about_text {
     padding-top: 10rem;
     margin-right: 5rem;
+    font-size: 2rem;
   }
   .about .about_pic img {
     width: 25rem;
@@ -551,6 +552,7 @@ footer #page-top.DownMove {
     width: 50%;
     padding-top: 0rem;
     padding-left: 1rem;
+    font-size: 2rem;
   }
   .about .about_pic img {
     width: 25rem;
