@@ -197,6 +197,7 @@ header .nav_ham {
   height: 50%;
 }
 .services .services_container {
+  margin: 0 5rem;
   padding: 8rem 5rem;
 }
 .services .services_container .services_items {
@@ -205,7 +206,7 @@ header .nav_ham {
 }
 .services .services_container .services_items .services_item {
   width: 300px;
-  height: 100%;
+  height: 400px;
   text-align: center;
   border: 2px solid rgb(246, 192, 100);
   background-color: white;
@@ -242,6 +243,7 @@ header .nav_ham {
 }
 .pricing .pricing_table {
   padding: 10rem 20rem;
+  font-size: 3rem;
 }
 .pricing .pricing_table .price_table {
   border: 1px solid rgb(246, 192, 100);
@@ -319,7 +321,7 @@ header .nav_ham {
 }
 .faq .faq_title {
   width: 100%;
-  height: 40%;
+  height: 30%;
   background-image: url(../images/FAQ.jpg);
   background-size: cover;
   background-position: 50% 25%;
@@ -327,52 +329,59 @@ header .nav_ham {
   text-align: center;
   padding-top: 5rem;
 }
-.faq .faq_accordion {
-  margin: 5rem 15rem;
-}
-.faq .faq_accordion p {
+.faq .accordion-area {
   color: black;
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.faq .faq_accordion .toggle {
-  display: none;
+.faq .accordion-area li {
+  margin: 10px 0;
 }
-.faq .faq_accordion .Label {
-  padding: 1em;
-  display: block;
+.faq .accordion-area section {
+  border: 1px solid #ccc;
+}
+.faq .accordion-area .title {
   color: black;
+  position: relative;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: normal;
+  padding: 1% 1% 1% 50px;
+  transition: all 0.5s ease;
 }
-.faq .faq_accordion .Label::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-top: 2px solid rgb(0, 0, 0);
-  border-right: 2px solid rgb(0, 0, 0);
-  -webkit-transform: rotate(45deg);
+.faq .accordion-area .title::before, .faq .accordion-area .title::after {
   position: absolute;
-  top: calc(50% - 3px);
-  right: 20px;
-  transform: rotate(135deg);
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #333;
 }
-.faq .faq_accordion .Label,
-.faq .faq_accordion .content {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  transition: all 0.3s;
+.faq .accordion-area .title::before {
+  top: 48%;
+  left: 15px;
+  transform: rotate(0deg);
 }
-.faq .faq_accordion .content {
-  height: 0;
-  margin-bottom: 10px;
-  padding: 0 20px;
-  overflow: hidden;
+.faq .accordion-area .title::after {
+  top: 48%;
+  left: 15px;
+  transform: rotate(90deg);
 }
-.faq .faq_accordion .toggle:checked + .Label + .content {
-  height: auto;
-  padding: 20px;
-  transition: all 0.3s;
+.faq .accordion-area .title.close::before {
+  transform: rotate(45deg);
 }
-.faq .faq_accordion .toggle:checked + .Label::before {
-  transform: rotate(-45deg) !important;
+.faq .accordion-area .title.close::after {
+  transform: rotate(-45deg);
+}
+.faq .accordion-area .box {
+  display: none;
+  background: #f3f3f3;
+  margin: 0 3% 3% 3%;
+  padding: 3%;
+}
+.faq .accordion-area .box p {
+  color: black;
 }
 
 footer {
@@ -469,6 +478,7 @@ footer #page-top.DownMove {
     object-fit: cover;
   }
   .services .services_container {
+    margin: 0 0rem;
     padding: 8rem 5rem;
   }
   .services .services_container .services_items {
@@ -495,6 +505,7 @@ footer #page-top.DownMove {
   }
   .pricing .pricing_table {
     padding: 10rem 0rem;
+    font-size: 2rem;
   }
   .overview {
     height: 100%;
@@ -515,9 +526,6 @@ footer #page-top.DownMove {
     height: 30%;
     font-size: 8rem;
     text-align: center;
-  }
-  .faq .faq_accordion {
-    margin: 5rem 0rem;
   }
 }
 /* SP view */
@@ -579,6 +587,7 @@ footer #page-top.DownMove {
     padding-top: 5rem;
   }
   .pricing .pricing_table {
+    font-size: 2rem;
     padding: 10rem 0rem;
   }
   .overview {
@@ -601,9 +610,6 @@ footer #page-top.DownMove {
     height: 20%;
     font-size: 6rem;
     text-align: center;
-  }
-  .faq .faq_accordion {
-    margin: 5rem 0rem;
   }
 }
 /* hamburger */

@@ -175,6 +175,7 @@ header {
   }
 
   .services_container {
+    margin: 0 5rem;
     padding: 8rem 5rem;
 
     .services_items {
@@ -183,7 +184,7 @@ header {
 
       .services_item {
         width: 300px;
-        height: 100%;
+        height: 400px;
         text-align: center;
         border: 2px solid rgb(246, 192, 100);
         background-color: white;
@@ -228,6 +229,7 @@ header {
 
   .pricing_table {
     padding: 10rem 20rem;
+    font-size: 3rem;
 
     .price_table {
       border: 1px solid rgb(246, 192, 100);
@@ -321,7 +323,7 @@ header {
 
   .faq_title {
     width: 100%;
-    height: 40%;
+    height: 30%;
     background-image: url(../images/FAQ.jpg);
     background-size: cover;
     background-position: 50% 25%;
@@ -330,53 +332,67 @@ header {
     padding-top: 5rem;
   }
 
-  .faq_accordion {
-    margin: 5rem 15rem;
+  .accordion-area {
+    color: black;
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
 
-    p {
-      color: black;
+    li {
+      margin: 10px 0;
     }
 
-    .toggle {
+    section {
+      border: 1px solid #ccc;
+    }
+
+    .title {
+      color: black;
+      position: relative;
+      cursor: pointer;
+      font-size: 2rem;
+      font-weight: normal;
+      padding: 1% 1% 1% 50px;
+      transition: all 0.5s ease;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 2px;
+        background-color: #333;
+      }
+      &::before {
+        top: 48%;
+        left: 15px;
+        transform: rotate(0deg);
+      }
+      &::after {
+        top: 48%;
+        left: 15px;
+        transform: rotate(90deg);
+      }
+
+      &.close::before {
+        transform: rotate(45deg);
+      }
+
+      &.close::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    .box {
       display: none;
-    }
-    .Label {
-      padding: 1em;
-      display: block;
-      color: black;
-    }
-    .Label::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-top: 2px solid rgb(0, 0, 0);
-      border-right: 2px solid rgb(0, 0, 0);
-      -webkit-transform: rotate(45deg);
-      position: absolute;
-      top: calc(50% - 3px);
-      right: 20px;
-      transform: rotate(135deg);
-    }
-    .Label,
-    .content {
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      transform: translateZ(0);
-      transition: all 0.3s;
-    }
-    .content {
-      height: 0;
-      margin-bottom: 10px;
-      padding: 0 20px;
-      overflow: hidden;
-    }
-    .toggle:checked + .Label + .content {
-      height: auto;
-      padding: 20px;
-      transition: all 0.3s;
-    }
-    .toggle:checked + .Label::before {
-      transform: rotate(-45deg) !important;
+      background: #f3f3f3;
+      margin: 0 3% 3% 3%;
+      padding: 3%;
+
+      p {
+        color: black;
+      }
     }
   }
 }
@@ -497,6 +513,7 @@ footer {
 
   .services {
     .services_container {
+      margin: 0 0rem;
       padding: 8rem 5rem;
 
       .services_items {
@@ -532,6 +549,7 @@ footer {
 
     .pricing_table {
       padding: 10rem 0rem;
+      font-size: 2rem;
     }
   }
 
@@ -559,10 +577,6 @@ footer {
       height: 30%;
       font-size: 8rem;
       text-align: center;
-    }
-
-    .faq_accordion {
-      margin: 5rem 0rem;
     }
   }
 }
@@ -644,6 +658,7 @@ footer {
     }
 
     .pricing_table {
+      font-size: 2rem;
       padding: 10rem 0rem;
     }
   }
@@ -673,9 +688,6 @@ footer {
       height: 20%;
       font-size: 6rem;
       text-align: center;
-    }
-    .faq_accordion {
-      margin: 5rem 0rem;
     }
   }
 }
