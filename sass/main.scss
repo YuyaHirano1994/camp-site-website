@@ -603,7 +603,7 @@ footer {
   }
 
   .about {
-    height: 80vh;
+    height: 100%;
 
     .about_title {
       font-size: 1.5em;
@@ -618,10 +618,12 @@ footer {
     }
 
     .about_text {
+      border: 1px solid red;
       width: 50%;
+      height: 100%;
       padding-top: 0rem;
       padding-left: 1rem;
-      font-size: 2rem;
+      font-size: 100%;
     }
 
     .about_pic {
@@ -658,7 +660,7 @@ footer {
     }
 
     .pricing_table {
-      font-size: 2rem;
+      font-size: 1.5rem;
       padding: 10rem 0rem;
     }
   }

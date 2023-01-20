@@ -544,7 +544,7 @@ footer #page-top.DownMove {
     display: block;
   }
   .about {
-    height: 80vh;
+    height: 100%;
   }
   .about .about_title {
     font-size: 1.5em;
@@ -557,10 +557,12 @@ footer #page-top.DownMove {
     margin-top: 5rem;
   }
   .about .about_text {
+    border: 1px solid red;
     width: 50%;
+    height: 100%;
     padding-top: 0rem;
     padding-left: 1rem;
-    font-size: 2rem;
+    font-size: 100%;
   }
   .about .about_pic img {
     width: 25rem;
@@ -587,7 +589,7 @@ footer #page-top.DownMove {
     padding-top: 5rem;
   }
   .pricing .pricing_table {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 10rem 0rem;
   }
   .overview {
