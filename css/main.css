@@ -447,9 +447,6 @@ footer #page-top.DownMove {
 
 /* Tablet view */
 @media (max-width: 1024px) and (min-width: 560px) {
-  header {
-    border: 1px solid green;
-  }
   header .hero .main_title {
     font-size: 4em;
   }
@@ -458,6 +455,9 @@ footer #page-top.DownMove {
   }
   header .nav_ham {
     display: block;
+  }
+  .about {
+    height: 100%;
   }
   .about .about_title {
     font-size: 3rem;
